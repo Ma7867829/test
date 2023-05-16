@@ -1,0 +1,40 @@
+
+
+<html>
+<head></head>
+<body>
+<!-- This will create the smiley face using the 'canvas' element-->
+    <script>
+        var canvas = document.createElement('canvas');
+        canvas.width = 100;
+        canvas.height = 100;
+        document.body.appendChild(canvas);
+        
+        var context = canvas.getContext('2d');
+
+        context.beginPath();
+        context.arc(50, 50, 40, 0, 2 * Math.PI, false);
+        context.lineWidth = 5;
+        context.strokeStyle = '#000000';
+        context.stroke();
+
+        // Draws the left eye
+        context.beginPath();
+        context.arc(30, 35, 10, 0, 2 * Math.PI, false);
+        context.fillStyle = '#000000';
+        context.fill();
+
+        // Draws the right eye
+        context.beginPath();
+        context.arc(70, 35, 10, 0, 2 * Math.PI, false);
+        context.fillStyle = '#000000';
+        context.fill();
+
+        // Draws the mouth
+        context.beginPath();
+        context.arc(50, 65, 25, 0, Math.PI, false);
+        context.stroke();
+    </script>
+</body>
+</html>
+
